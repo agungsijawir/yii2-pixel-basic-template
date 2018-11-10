@@ -1,0 +1,73 @@
+{
+    "name": "agungandika/yii2-pixeladmin-themes",
+    "description": "Yii2 with PixelAdmin Bootstrap Themes",
+    "keywords": ["yii2", "framework", "basic", "project template", "pixel-admin"],
+    "homepage": "http://www.agungandika.com/",
+    "type": "project",
+    "license": "BSD-3-Clause",
+    "support": {
+        "issues": "https://gitlab.com/agungandika/yii2-pixeladmin-themes/issues",
+        "source": "https://gitlab.com/agungandika/yii2-pixeladmin-themes.git"
+    },
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=7.0.0",
+        "ext-json": "*",
+        "codemix/yii2-localeurls": "1.7.1",
+        "mdmsoft/yii2-admin": "~2.0",
+        "yii2tech/config": "*",
+        "yiisoft/yii2": "~2.0.14",
+        "yiisoft/yii2-jui": "~2.0.0",
+        "yiisoft/yii2-bootstrap": "~2.0.0",
+        "yiisoft/yii2-imagine": "~2.1.0",
+        "yiisoft/yii2-swiftmailer": "~2.0.0"
+    },
+    "require-dev": {
+        "yiisoft/yii2-debug": "~2.0.0",
+        "yiisoft/yii2-gii": "~2.0.0",
+        "yiisoft/yii2-faker": "~2.0.0",
+
+        "codeception/base": "^2.2.3",
+        "codeception/verify": "~0.3.1",
+        "codeception/specify": "~0.4.3"
+    },
+    "config": {
+        "process-timeout": 1800,
+        "fxp-asset": {
+            "enabled": false
+        }
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "yii\\composer\\Installer::postInstall",
+            "yii migrate --migrationPath=@yii/rbac/migrations --interactive=0",
+            "yii migrate --interactive=0"
+        ],
+        "post-create-project-cmd": [
+            "yii\\composer\\Installer::postCreateProject",
+            "yii\\composer\\Installer::postInstall"
+        ]
+    },
+    "extra": {
+        "yii\\composer\\Installer::postCreateProject": {
+            "setPermission": [
+                {
+                    "runtime": "0777",
+                    "web/assets": "0777",
+                    "yii": "0755"
+                }
+            ]
+        },
+        "yii\\composer\\Installer::postInstall": {
+            "generateCookieValidationKey": [
+                "config/web.php"
+            ]
+        }
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ]
+}

@@ -1,0 +1,85 @@
+.page-404-bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.page-404-header,
+.page-404-error-code,
+.page-404-subheader,
+.page-404-text,
+.page-404-form {
+    position: relative;
+
+    padding: 0 30px;
+
+    text-align: center;
+}
+
+.page-404-header {
+    width: 100%;
+    padding: 20px 0;
+
+    box-shadow: 0 4px 0 rgba(0,0,0,.1);
+}
+
+.page-404-error-code {
+    margin-top: 60px;
+
+    color: #fff;
+    text-shadow: 0 4px 0 rgba(0,0,0,.1);
+
+    font-size: 120px;
+    font-weight: 700;
+    line-height: 140px;
+}
+
+.page-404-subheader,
+.page-404-text {
+    margin-bottom: 60px;
+
+    color: rgba(0,0,0,.5);
+
+    font-weight: 600;
+}
+
+.page-404-subheader {
+    font-size: 50px;
+}
+
+.page-404-subheader:after {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+
+    display: block;
+
+    width: 40px;
+    height: 4px;
+    margin-left: -20px;
+
+    content: "";
+
+    background: rgba(0,0,0,.2);
+}
+
+.page-404-text {
+    font-size: 20px;
+}
+
+.page-404-form {
+    max-width: 500px;
+    margin: 0 auto 60px auto;
+}
+
+.page-404-form * {
+    margin: 0 !important;
+
+    border: none !important;
+}
+
+.page-404-form .btn {
+    background: rgba(0, 0, 0, .3);
+}

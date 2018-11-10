@@ -1,0 +1,47 @@
+.px-navbar-image ~ span {
+    padding-left: 0 !important;
+}
+.px-navbar-image {
+    margin-right: 10px;
+}
+
+.page-header h1 {
+   font-size: 24px;
+}
+
+.nav.navbar-top-menu li.active > a,
+.nav.navbar-top-menu li.active > a:hover,
+.nav.navbar-top-menu li.active > a:focus {
+    font-weight: bold;
+}
+.nav.navbar-top-menu li.active > a:hover {
+    background: rgba(0, 0, 0, 0.15) !important;
+    color: rgba(0, 0, 0, 0.8);
+}
+.nav.navbar-top-menu li.active > a:focus {
+    background: rgba(0,0,0,.06);
+    color: rgba(255,255,255,.8);
+}
+
+.nav.navbar-menu-user .dropdown-menu > li > a:focus,
+.nav.navbar-menu-user .dropdown-menu > li > a:hover {
+    background: #2d90f7;
+    color: #fff;
+}
+.nav.navbar-menu-user .dropdown-menu li a i.fa {
+    margin-right: 15px;
+}
+
+.user-profile.user-avatar {
+    max-width: 100%;
+}
+
+img.icon-24 {
+    width: 24px;
+}
+
+.px-navbar .px-navbar-label {
+    margin: 0 0 0 -10px;
+    padding: 4px;
+    font-size: 10pt;
+}

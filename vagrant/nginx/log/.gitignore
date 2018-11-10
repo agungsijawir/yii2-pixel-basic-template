@@ -1,0 +1,3 @@
+#nginx logs
+basic_template.access.log
+basic_template.error.log
